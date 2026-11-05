@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-forgetting-curve-governor"
+version = "0.1.0"
+description = "Ebbinghaus mathematical decay governor that dynamically scores retention priority to prune stale agent memory"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-forgetting-curve-governor = "agent_forgetting_curve_governor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_forgetting_curve_governor*"]
